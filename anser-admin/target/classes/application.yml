@@ -1,0 +1,16 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: anser-admin
+  zipkin:
+    base-url: http://172.16.19.116:9411
+    boot:
+      admin:
+        client:
+          url: http://172.16.19.116:9004
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.16.19.116:8848
