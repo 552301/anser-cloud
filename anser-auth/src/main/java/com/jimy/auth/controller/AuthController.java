@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Description com.jimy.auth.controller
  * @date 2020-03-28 16:17
  **/
-@RestController
+@RestController("anser-auth")
 public class AuthController {
 
     @Autowired

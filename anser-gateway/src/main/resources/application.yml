@@ -66,17 +66,17 @@ feign:
     response:
       enabled: true
 
-logging:
-  level:
-    com.jimy.anser.security.gate.v2: info
+#logging:
+#  level:
+#    com.jimy.anser.security.gate.v2: info
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-  security:
-    enabled: false
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'
+#  security:
+#    enabled: false
 
 
 gate:
@@ -85,12 +85,12 @@ gate:
 
 
 auth:
-  serviceId: ace-auth
+  serviceId: anser-auth
   user:
     token-header: Authorization
   client:
     token-header: x-client-token
-    id: ace-gate  #不填则默认读取spring.application.name
+    id: anser-gateway  #不填则默认读取spring.application.name
     secret: 123456
 
 hystrix:
