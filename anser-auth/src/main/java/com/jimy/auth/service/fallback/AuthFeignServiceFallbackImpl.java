@@ -13,6 +13,6 @@ public class AuthFeignServiceFallbackImpl implements AuthFeignService {
 
     @Override
     public String hello(String name) {
-        return "hello " + name + ", this is template-auth, but request error";
+        return "hello " + name + ", this is anser-auth, but request error";
     }
 }

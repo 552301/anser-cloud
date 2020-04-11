@@ -24,6 +24,6 @@ public interface AuthFeignService {
      * @param name
      * @return
      */
-    @GetMapping("/hello/{name}")
+    @GetMapping("/admin/hello/{name}")
     public String hello(@PathVariable(name = "name") String name);
 }

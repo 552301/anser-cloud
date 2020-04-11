@@ -1,4 +1,6 @@
 server:
+  servlet:
+    context-path: /auth
   port: 9002
 
 spring:
@@ -14,16 +16,16 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
-# 开启Feign的Hystrix熔断器支持
-feign:
-  hystrix:
-    enabled: true
-hystrix:
-  threadpool:
-    default:
-      coreSize: 1000 ##并发执行的最大线程数，默认10
-      maxQueueSize: 1000 ##BlockingQueue的最大队列数
-      queueSizeRejectionThreshold: 500 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
+    # 开启Feign的Hystrix熔断器支持
+    feign:
+      hystrix:
+        enabled: true
+    hystrix:
+      threadpool:
+        default:
+        coreSize: 1000 ##并发执行的最大线程数，默认10
+        maxQueueSize: 1000 ##BlockingQueue的最大队列数
+        queueSizeRejectionThreshold: 500 ##即使maxQueueSize没有达到，达到queueSizeRejectionThreshold该值后，请求也会被拒绝
   command:
     default:
       execution:
