@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>anser-cloud</artifactId>
+        <groupId>com.jimy</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>anser-common</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>anser-common-core</module>
+        <module>anser-common-interceptor</module>
+        <module>anser-common-cache</module>
+        <module>anser-common-resource</module>
+        <module>anser-common-feign</module>
+        <module>anser-common-rabbitmq</module>
+        <module>anser-common-gateway</module>
+        <module>anser-common-user</module>
+        <module>anser-common-mp</module>
+    </modules>
+
+    <dependencies>
+        <!--hutool-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <!--server-api-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+    </dependencies>
+</project>

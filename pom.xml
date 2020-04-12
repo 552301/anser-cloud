@@ -19,16 +19,18 @@
         <maven.compiler.target>13</maven.compiler.target>
         <spring-cloud.version>Hoxton.SR3</spring-cloud.version>
         <lombok.version>1.18.8</lombok.version>
+        <hutool.version>4.4.5</hutool.version>
         <fastjson.version>1.2.58</fastjson.version>
         <swagger2.version>2.9.2</swagger2.version>
         <mysql.version>8.0.15</mysql.version>
-        <mybatis-plus.version>3.3.1.tmp</mybatis-plus.version>
+        <mybatis-plus.version>3.3.1</mybatis-plus.version>
         <spring-cloud-starter-alibaba-nacos-discovery.version>0.9.0.RELEASE</spring-cloud-starter-alibaba-nacos-discovery.version>
     </properties>
     <modules>
         <module>anser-admin</module>
         <module>anser-auth</module>
         <module>anser-gateway</module>
+        <module>anser-common</module>
     </modules>
 
     <dependencies>
@@ -41,6 +43,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
             <dependency>
                 <groupId>de.codecentric</groupId>
                 <artifactId>spring-boot-admin-starter-client</artifactId>
@@ -104,12 +111,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 </project>

@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.jimy.common.cache.config.RedisTemplateConfig,\
+    com.jimy.common.cache.config.CacheManagerConfig,\
+    com.jimy.common.cache.component.RedisUUID
