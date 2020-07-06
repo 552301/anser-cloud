@@ -33,7 +33,9 @@ public class GlobalInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object obj) throws Exception {
+        //获取忽略URL数量
         long exist =  authIgnoreConfig.getIgnoreUrls().stream().filter(url-> url.trim().equals(request.getRequestURI())).count();
+        //判断忽略URL数量是否不等于0
         if(exist != 0){
             return true;
         }

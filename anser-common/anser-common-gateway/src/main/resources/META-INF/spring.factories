@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.jimy.common.gateway.config.StandardStringSerializationConfig,\
+  com.jimy.common.gateway.config.RedisLimiterConfig

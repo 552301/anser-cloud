@@ -60,7 +60,7 @@ public interface CommonConstants {
     /**
      * 限流缓存key
      */
-    String REDIS_LIMIT_KEY = "ms_redis_limit_key:";
+    String REDIS_LIMIT_KEY = "anser_redis_limit_key:";
 
 
 }

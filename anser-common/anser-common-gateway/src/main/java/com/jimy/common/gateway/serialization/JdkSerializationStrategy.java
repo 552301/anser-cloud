@@ -1,6 +1,7 @@
 package com.jimy.common.gateway.serialization;
 
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer;
 
 /**
@@ -9,6 +10,7 @@ import org.springframework.data.redis.serializer.JdkSerializationRedisSerializer
  * @author efenderbosch
  *
  */
+@Configuration
 public class JdkSerializationStrategy extends StandardStringSerializationStrategy {
 
 	private static final JdkSerializationRedisSerializer OBJECT_SERIALIZER = new JdkSerializationRedisSerializer();

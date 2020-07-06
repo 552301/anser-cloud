@@ -79,11 +79,17 @@ spring:
           - Path=/api/auth/**
           filters:
           - StripPrefix=1
-#      - id: gateway-service
-#        uri: https://www.baidu.com
-#        order: 0
-#        predicates:
-#        - After=2020-04-04T00:00:00+08:00[Asia/Shanghai]
+## spring security 配置
+security:
+  oauth2:
+    client:
+      # 默认放行url,如果子模块重写这里的配置就会被覆盖
+      ignore-urls:
+        - /actuator/**
+        - /v2/api-docs
+    resource:
+      loadBalanced: true
+      token-info-uri: http://anser-auth/oauth/checkToken
 
 #logging:
 #  level:

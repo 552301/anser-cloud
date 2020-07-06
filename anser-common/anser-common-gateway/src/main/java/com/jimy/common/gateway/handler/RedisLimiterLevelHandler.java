@@ -8,6 +8,7 @@ import com.jimy.common.core.entity.RateLimiterVO;
 import com.jimy.common.gateway.inteface.LimiterLevelResolver;
 import com.jimy.common.gateway.serialization.RedisTokenStoreSerializationStrategy;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.ArrayList;
@@ -22,6 +23,7 @@ import java.util.Map;
  * @description: TODO redis 管理 limiter
  * @date 2019/7/1510:50
  */
+@Configuration
 public class RedisLimiterLevelHandler implements LimiterLevelResolver {
 
     @Autowired

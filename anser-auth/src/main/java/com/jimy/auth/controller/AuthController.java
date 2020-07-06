@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController("anser-auth")
 public class AuthController {
 
-    @Autowired
+//    @Autowired
     private AuthFeignService authFeignService;
 
     @GetMapping("/hello/{name}")
@@ -27,5 +27,15 @@ public class AuthController {
     @GetMapping("/feignHello/{name}")
     public String feignHello(@PathVariable String name) {
         return authFeignService.hello(name);
+    }
+
+    @GetMapping("/token")
+    public String token(){
+        return "123";
+    }
+
+    @GetMapping("/checkToken")
+    public Boolean checkToken(){
+        return true;
     }
 }

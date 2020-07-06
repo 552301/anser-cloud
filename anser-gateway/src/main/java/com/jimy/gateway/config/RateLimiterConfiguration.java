@@ -43,7 +43,7 @@ public class RateLimiterConfiguration {
             if(CollUtil.isNotEmpty(authorization)){
                 String token = authorization.get(0);
                 token = token.substring(token.indexOf(CommonConstants.PREFIX) + 1,token.length());
-                String key = SecurityConstants.MS_OAUTH_PREFIX + CommonConstants.AUTH_USER + token;
+                String key = SecurityConstants.ANSER_OAUTH_PREFIX + CommonConstants.AUTH_USER + token;
                 byte[] principal = redisTemplate.getConnectionFactory().getConnection().get(redisTokenStoreSerializationStrategy.serialize(key));
                 if(principal != null){
                     StoreUser principalStr = redisTokenStoreSerializationStrategy.deserialize(principal,StoreUser.class);

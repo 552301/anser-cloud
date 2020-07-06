@@ -34,6 +34,6 @@ public class RequestGlobalFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return -999;
+        return -1;
     }
 }

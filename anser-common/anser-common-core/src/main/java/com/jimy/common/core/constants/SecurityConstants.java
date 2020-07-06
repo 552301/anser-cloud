@@ -27,7 +27,7 @@ public interface SecurityConstants {
     /**
      * token key 前缀
      */
-    String MS_OAUTH_PREFIX = "ms_oauth:";
+    String ANSER_OAUTH_PREFIX = "anser_oauth:";
 
     /**
      * token key
@@ -52,7 +52,7 @@ public interface SecurityConstants {
     /**
      * redis key oauth 客户端信息
      */
-    String CLIENT_DETAILS_KEY = "ms_oauth:client:details";
+    String CLIENT_DETAILS_KEY = "anser_oauth:client:details";
 
     String CACHE_USER_DETAILS = "cache_user_details";
 
